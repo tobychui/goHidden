@@ -6,8 +6,9 @@ import (
 )
 
 /*
-	Arozos hidden module
-	author: tobychui
+	goHidden module
+	Author: tobychui
+	License: MIT
 
 	No, the name didn't mean you can't find this module
 	Yes, this is actually a module that use to hide files
