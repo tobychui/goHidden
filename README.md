@@ -1,4 +1,6 @@
 # goHidden
+[![Go Reference](https://pkg.go.dev/badge/github.com/tobychui/goHidden.svg)](https://pkg.go.dev/github.com/tobychui/goHidden)
+
 A Go module to set a folder hidden and check if a folder is hidden
 
 Support Windows and Linux, should also work on MacOS
