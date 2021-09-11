@@ -3,7 +3,7 @@
 
 A Go module to set a folder hidden and check if a folder is hidden
 
-Support Windows and Linux, should also work on MacOS
+Support Windows and Linux
 
 
 
