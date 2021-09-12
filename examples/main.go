@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"os"
+	"runtime"
 
 	hidden "github.com/tobychui/goHidden"
 )
@@ -25,9 +26,19 @@ func main() {
 	}
 
 	//Check if it is hidden
-	isHidden, err := hidden.IsHidden("./test", false)
-	if err != nil {
-		panic(err)
+	isHidden := false
+	if runtime.GOOS == "windows" {
+		//Windows. Folder is hidden without filename change
+		isHidden, err = hidden.IsHidden("./test", false)
+		if err != nil {
+			panic(err)
+		}
+	} else {
+		//Linux. Folder is hidden via adding "." prefix
+		isHidden, err = hidden.IsHidden("./.test", false)
+		if err != nil {
+			panic(err)
+		}
 	}
 
 	if isHidden {
