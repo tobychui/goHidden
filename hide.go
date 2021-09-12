@@ -10,7 +10,8 @@ import (
 
 func hide(filename string) error {
 	if !strings.HasPrefix(filepath.Base(filename), ".") {
-		err := os.Rename(filename, "."+filename)
+		newName := filepath.Join(filepath.Dir(filename), "."+filepath.Base(filename))
+		err := os.Rename(filename, newName)
 		if err != nil {
 			return err
 		}
